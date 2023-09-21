@@ -39,6 +39,10 @@ img {
     max-width: 120rem;
     margin: 0 auto;
 }
+.contenedor2 {
+    max-width: 120rem;
+    margin: 0 auto;
+}
 h1, h2, h3 {
     text-align: center;
     color: var(--secundario);
@@ -57,7 +61,35 @@ h3 {
 /** Header **/
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+}
+/** Header **/
+.webp .header {
+    background-image: url(../img/12.jpg);
+}
+.no-webp .header {
+    background-image: url(../img/10.jpg);
+}
+.header__texto {
+   text-align: center;
+   color: var(--blanco);
+   margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+.barra {
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 .header__logo {
     margin: 3rem 0;
@@ -222,4 +254,42 @@ h3 {
 .formulario__submit:hover {
     cursor: pointer;
     background-color: var(--secundarioOscuro);
+}
+/* Estilos para el carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.carousel img {
+    width: 100%;
+    
+}
+
+/* Estilos para los botones de navegación */
+.carousel-control {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
 }
