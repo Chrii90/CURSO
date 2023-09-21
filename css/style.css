@@ -50,6 +50,7 @@ h1, h2, h3 {
 }
 h1 {
     font-size: 4rem;
+    background-color: #89119D;
 }
 h2 {
     font-size: 3.2rem;
