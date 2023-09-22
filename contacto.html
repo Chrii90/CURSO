@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        </a>
+        
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Home</a>
+        <a class="navegacion__enlace" href="tienda.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+    </nav>
+    <form>
+        <fieldset>
+            <legend align="righ"> Dejanos tu comentario y te contactaremos</legend>
+        <p><label for="camponombre">Nombre:</label>  
+        <input id="camponombre" placeholder="Escribe tu nombre"></p>
+
+        <p><label for="email">Correo electrónico: </label>  
+        <input id="email" type="email" required placeholder="Ingresa tu correo electrónico"></p>
+
+        <p><label for="tel">Número de contacto:</label>
+        <input type="tel" placeholder="Ingresa tu celular o teléfono"></p>
+
+        <p><label for="camponombre">Asunto: </label>  
+            <input type="camponombre"></p>
+
+        <p><label>Comentario:</label>  <br>
+            <textarea name="comentario" rows="10" cols="70" required> 
+            </textarea></p>
+        
+        <p><input type="submit" value="Enviar"></p>    
+
+    </fieldset>
+    </form>
+    
+</body>
+</html>

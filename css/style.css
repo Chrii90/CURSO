@@ -296,3 +296,12 @@ h3 {
 #nextBtn {
     right: 10px;
 }
+
+input {
+    display: flex;
+  }
+
+  legend {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color:yellow;
