@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -23,8 +24,10 @@
     </nav>
     
     <main class="contenedor2">
+
         <h1>CATEGORIAS</h1>
-        <section class="gallery">
+
+        <div class="gallery">
             <div class="gallery__inner container">
               <div class="gallery__item">
                 <h3 class="gallery__title">Botines</h3>
@@ -42,8 +45,9 @@
                 <h3 class="gallery__title">Accesorios</h3>
               </div>
             </div>
-          </section>
-          <section class="contenedor comprar">
+        </div>
+
+        <section class="contenedor comprar">
             <h1>¿Por qué Comprar con nosotros?</h1>
     
             <div class="bloques">
@@ -71,15 +75,76 @@
                     <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
                 </div> <!--.bloque-->
             </div><!--.bloques-->
-        </section> 
+        </section>
+        <section class="Liquidaciones">
+            <h1>LIQUIDACIONES</h1>
+            
+            <div class="product-grid">
+                <div class="product">
+                    <img src="/img/999.jpg" alt="Producto 1">
+                    <div class="overlay">
+                        <p>Descripción del Producto 1</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="/img/9999.jpg" alt="Producto 2">
+                    <div class="overlay">
+                        <p>Descripción del Producto 2</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+        
+                <div class="product">
+                    <img src="/img/999.jpg" alt="Producto 3">
+                    <div class="overlay">
+                        <p>Descripción del Producto 3</p>
+                        <button>Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
-
     
+    <footer>
+        <div class="footer-grid">
+            <!-- Columna 1 - Nuestra Información -->
+            <div class="footer-column">
+                <h3>Nuestra Información</h3>
+                <p>Dirección: Calle 123, Ciudad</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Email: info@example.com</p>
+            </div>
 
-    
+            <!-- Columna 2 - Links de Interés -->
+            <div class="footer-column">
+                <h3>Links de Interés</h3>
+                <a class="footer-link" href="#">Términos y Condiciones</a>
+                <a class="footer-link" href="#">Política de Privacidad</a>
+                <a class="footer-link" href="#">Preguntas Frecuentes</a>
+            </div>
 
-    <footer class="footer">
-        <p class="footer__texto">Probando los cambios - Todos los derechos Reservados 2022.</p>
+            <!-- Columna 3 - Redes Sociales -->
+            <div class="footer-column">
+                <h3>Redes Sociales</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4 - Suscribirse a Nuestro Newsletter -->
+            <div class="footer-column">
+                <h3>Suscribirse a Nuestro Newsletter</h3>
+                <form class="subscribe-form" action="#">
+                    <input type="email" placeholder="Ingrese su correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
     </footer>
     <script src="js/scripts.js"></script>
 </body>
