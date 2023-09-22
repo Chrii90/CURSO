@@ -306,5 +306,6 @@ input {
   legend {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
     color:yellow;
   }
