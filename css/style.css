@@ -297,9 +297,11 @@ h3 {
     right: 10px;
 }
 
+/* Formulario */
 input {
     display: flex;
   }
+
 
   legend {
     font-size: 1.8rem;
