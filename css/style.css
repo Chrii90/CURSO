@@ -332,12 +332,50 @@ h3 {
 /* Formulario */
 input {
     display: flex;
-  }
-
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    /* Aplicar sombra al casillero */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+input[type="submit"],
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12%;
+    box-shadow: 6px 3px 5px rgba(0, 0, 0, 0.2);
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    /* Aplicar sombra al casillero */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    resize: none; /* Evitar que el usuario redimensione el textarea */
+    pointer-events: none; /* Evitar que el usuario haga clic y arrastre el textarea */
+}
 
   legend {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    color:yellow;
+    color: var(--primarioOscuro);
+    font-weight: bold;
   }
+  /* Estilos para el iframe */
+  iframe {
+    width: 100%; /* Ancho del iframe */
+    height: 400px; /* Altura del iframe */
+    border: 1px solid #ccc; /* Borde del iframe */
+}
+
