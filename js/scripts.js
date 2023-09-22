@@ -63,3 +63,26 @@ if (document.querySelector(".gallery__item")) {
 
 }
 
+/*carrousell marcas*/
+$(document).ready(function(){
+    $('.marca-carousel').slick({
+        slidesToShow: 4, // Mostrar 4 imágenes a la vez
+        slidesToScroll: 1, // Desplazarse 1 imagen a la vez
+        autoplay: true, // Habilita la reproducción automática
+        autoplaySpeed: 3000, // Establece la velocidad de reproducción automática en milisegundos (3 segundos en este caso)
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3 // Cambiar a 3 imágenes en dispositivos más pequeños
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2 // Cambiar a 2 imágenes en dispositivos aún más pequeños
+                }
+            }
+        ]
+    });
+});

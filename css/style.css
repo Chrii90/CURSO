@@ -338,17 +338,26 @@ h3 {
   }
 
 /* Formulario */
+.Formulario {
+background-color: #002A61;
+}
+
+.Formulario label {
+    color: #FFF;
+}
+
 input {
     display: flex;
     background-color: #f2f2f2;
-    color: #333;
+    color: #000;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
     /* Aplicar sombra al casillero */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px rgba(250, 249, 249, 0.2);
 }
 input[type="submit"],
+
 button {
     background-color: #007bff;
     color: #fff;
@@ -356,11 +365,9 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 12%;
-    box-shadow: 6px 3px 5px rgba(0, 0, 0, 0.2);
+    
 }
-input[type="text"],
-input[type="email"],
-input[type="password"],
+
 textarea {
     background-color: #f2f2f2;
     color: #333;
@@ -368,16 +375,16 @@ textarea {
     padding: 10px;
     margin: 10px;
     /* Aplicar sombra al casillero */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px rgba(250, 249, 249, 0.2);
     resize: none; /* Evitar que el usuario redimensione el textarea */
-    pointer-events: none; /* Evitar que el usuario haga clic y arrastre el textarea */
+    
 }
 
   legend {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    color: var(--primarioOscuro);
+    color: var(--blanco);
     font-weight: bold;
   }
   /* Estilos para el iframe */
@@ -452,6 +459,12 @@ textarea {
     color: #FFF;
 }
 
+/*Compra por marca*/
+/* Estilo de cambio de color al pasar el mouse */
+.marca-item:hover img {
+    filter: brightness(1.2); /* Cambia el brillo al 120% al pasar el mouse */
+}
+
 /**footer**/
  /* Estilos para el footer */
  footer {
@@ -465,6 +478,9 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
     gap: 20px; /* Espacio entre las columnas */
+}
+.footer-grid p {
+    color: #FFF;
 }
 
 /* Estilos para cada columna */
