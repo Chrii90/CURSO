@@ -445,6 +445,10 @@ textarea {
 .Liquidaciones {
     background-color: #00204a;
     color: #ffffff;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+
 }
 .Liquidaciones p{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);   
@@ -457,6 +461,7 @@ textarea {
 }
 .Liquidaciones h1{
     color: #FFF;
+
 }
 
 /*Compra por marca*/
@@ -465,12 +470,24 @@ textarea {
     filter: brightness(1.2); /* Cambia el brillo al 120% al pasar el mouse */
 }
 
+/* Estilos para hacer que el carrusel sea completamente responsive */
+.marca-item {
+    padding: 10px;
+}
+
+.marca-item img {
+    max-width: 100%;
+    height: auto;
+}
+
 /**footer**/
  /* Estilos para el footer */
  footer {
     background-color: var(--primarioOscuro);
     color: white;
     padding: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Estilos para el grid */
@@ -478,6 +495,9 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
     gap: 20px; /* Espacio entre las columnas */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 .footer-grid p {
     color: #FFF;
@@ -485,7 +505,7 @@ textarea {
 
 /* Estilos para cada columna */
 .footer-column {
-    text-align: center;
+    text-align: left;
 }
 
 /* Estilos para los enlaces */
@@ -521,6 +541,18 @@ textarea {
 /* Estilos para el formulario de suscripción */
 .subscribe-form {
     text-align: center;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
 }
 
  /* Estilos de la cuadrícula */
@@ -571,3 +603,5 @@ textarea {
     color: #007bff; /* Cambia a un color azul al pasar el mouse */
 
 }
+
+
