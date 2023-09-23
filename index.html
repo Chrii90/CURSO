@@ -4,195 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrontEnd Store</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+   <link rel="stylesheet" href=" css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
 </head>
 <body>
-    <header class="header">
-        <a href="index.html">
-            <img class="header__logo" src="img/logo.png" alt="Logotipo">
-        </a>
-        
-    </header>
-    <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Home</a>
-        <a class="navegacion__enlace" href="tienda.html">Tienda</a>
-        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
-        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
-    </nav>
-    
-    <main class="contenedor2">
 
-        <h1>CATEGORIAS</h1>
+  <header class="header">
+    <a href="index.html">
+        <img class="header__logo" src="img/logo.png" alt="Logotipo">
+    </a>
+    
+</header>
+<nav class="navegacion">
+    <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Home</a>
+    <a class="navegacion__enlace" href="tienda.html">Tienda</a>
+    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+</nav>
 
-        <div class="gallery">
-            <div class="gallery__inner container">
-              <div class="gallery__item">
-                <h3 class="gallery__title">Botines</h3>
-              </div>
-              <div class="gallery__item">
-                <h3 class="gallery__title">Zapatillas</h3>
-              </div>
-              <div class="gallery__item --active">
-                <h3 class="gallery__title">Camperas</h3>
-              </div>
-              <div class="gallery__item">
-                <h3 class="gallery__title">Buzos</h3>
-              </div>
-              <div class="gallery__item">
-                <h3 class="gallery__title">Accesorios</h3>
-              </div>
-            </div>
-        </div>
+<!-- Carrousell -->
+<h1>CATEGORIAS</h1>
 
-        <section class="contenedor comprar">
-            <h1>¿Por qué Comprar con nosotros?</h1>
-    
-            <div class="bloques">
-                <div class="bloque">
-                    <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
-                    <h3 class="bloque__titulo">El Mejor Precio</h3>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
-                </div> <!--.bloque-->
-    
-                <div class="bloque">
-                    <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
-                    <h3 class="bloque__titulo">Para Devs</h3>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
-                </div> <!--.bloque-->
-    
-                <div class="bloque">
-                    <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
-                    <h3 class="bloque__titulo">Envío Gratis</h3>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
-                </div> <!--.bloque-->
-    
-                <div class="bloque">
-                    <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
-                    <h3 class="bloque__titulo">La Mejor Calidad</h3>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
-                </div> <!--.bloque-->
-            </div><!--.bloques-->
-        </section>
-        <section class="Liquidaciones">
-            <h1>LIQUIDACIONES</h1>
-            
-            <div class="product-grid">
-                <div class="product">
-                    <img src="/img/999.jpg" alt="Producto 1">
-                    <div class="overlay">
-                        <p>Descripción del Producto 1</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-        
-                <div class="product">
-                    <img src="/img/9999.jpg" alt="Producto 2">
-                    <div class="overlay">
-                        <p>Descripción del Producto 2</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-        
-                <div class="product">
-                    <img src="/img/999.jpg" alt="Producto 3">
-                    <div class="overlay">
-                        <p>Descripción del Producto 3</p>
-                        <button>Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <h1>COMPRA POR MARCA</h1>
-    <div class="marca-carousel">
-        
-        <!-- Imagen 1 -->
-        <div class="marca-item">
-            <a href="enlace_producto_1">
-                <img src="/img/10.jpg" alt="Producto 1">
-            </a>
-        </div>
-        <!-- Imagen 2 -->
-        <div class="marca-item">
-            <a href="enlace_producto_2">
-                <img src="/img/11.jpg" alt="Producto 2">
-            </a>
-        </div>
-        <!-- Imagen 3 -->
-        <div class="marca-item">
-            <a href="enlace_producto_3">
-                <img src="/img/12.jpg" alt="Producto 3">
-            </a>
-        </div>
-        <!-- Imagen 4 -->
-        <div class="marca-item">
-            <a href="enlace_producto_4">
-                <img src="/img/13.jpg" alt="Producto 4">
-            </a>
-        </div><div class="marca-item">
-            <a href="enlace_producto_4">
-                <img src="/img/9.jpg" alt="Producto 4">
-            </a>
-        </div>
-        <div class="marca-item">
-            <a href="enlace_producto_4">
-                <img src="/img/8.jpg" alt="Producto 4">
-            </a>
-        </div><div class="marca-item">
-            <a href="enlace_producto_4">
-                <img src="/img/7.jpg" alt="Producto 4">
-            </a>
-        </div>
-        <!-- Puedes agregar más imágenes aquí -->
+<div class="gallery">
+    <div class="gallery__inner container">
+      <div class="gallery__item">
+        <h3 class="gallery__title">Botines</h3>
+      </div>
+      <div class="gallery__item">
+        <h3 class="gallery__title">Zapatillas</h3>
+      </div>
+      <div class="gallery__item --active">
+        <h3 class="gallery__title">Camperas</h3>
+      </div>
+      <div class="gallery__item">
+        <h3 class="gallery__title">Buzos</h3>
+      </div>
+      <div class="gallery__item">
+        <h3 class="gallery__title">Accesorios</h3>
+      </div>
     </div>
+</div>
+<!--/carrousel-->
 
-    <footer>
-        <div class="footer-grid">
-            <!-- Columna 1 - Nuestra Información -->
-            <div class="footer-column">
-                <h3>Nuestra Información</h3>
-                <p>Dirección: Calle 123, Ciudad</p>
-                <p>Teléfono: (123) 456-7890</p>
-                <p>Email: info@example.com</p>
-            </div>
+<!--/porque elegirnos-->
+<section class="contenedor comprar">
+  <h1>¿Por qué Comprar con nosotros?</h1>
 
-            <!-- Columna 2 - Links de Interés -->
-            <div class="footer-column">
-                <h3>Links de Interés</h3>
-                <a class="footer-link" href="#">Términos y Condiciones</a>
-                <a class="footer-link" href="#">Política de Privacidad</a>
-                <a class="footer-link" href="#">Preguntas Frecuentes</a>
-            </div>
+  <div class="bloques">
+      <div class="bloque">
+          <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
+          <h3 class="bloque__titulo">El Mejor Precio</h3>
+          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+      </div> <!--.bloque-->
 
-            <!-- Columna 3 - Redes Sociales -->
-            <div class="footer-column">
-                <h3>Redes Sociales</h3>
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
+      <div class="bloque">
+          <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
+          <h3 class="bloque__titulo">Para Devs</h3>
+          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+      </div> <!--.bloque-->
 
-            <!-- Columna 4 - Suscribirse a Nuestro Newsletter -->
-            <div class="footer-column">
-                <h3>Suscribirse a Nuestro Newsletter</h3>
-                <form class="subscribe-form" action="#">
-                    <input type="email" placeholder="Ingrese su correo electrónico">
-                    <button type="submit">Suscribirse</button>
-                </form>
+      <div class="bloque">
+          <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
+          <h3 class="bloque__titulo">Envío Gratis</h3>
+          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+      </div> <!--.bloque-->
+
+      <div class="bloque">
+          <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
+          <h3 class="bloque__titulo">La Mejor Calidad</h3>
+          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+      </div> <!--.bloque-->
+  </div><!--.bloques-->
+</section> 
+
+<br>
+<br>
+<!--liquidaciones-->
+<section class="Liquidaciones">
+  <h1>LIQUIDACIONES</h1>
+   
+  <div class="contenedor2">
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="img/11.jpg" alt="Liquidación 1">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p>Descripción de Liquidación 1</p>
+                    <button>Comprar</button>
+                </div>
             </div>
         </div>
-    </footer>
-    <script src="js/scripts.js"></script>
-</body>
+        <div class="carousel-item">
+            <img src="img/11.jpg" alt="Liquidación 2">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p>Descripción de Liquidación 2</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/11.jpg" alt="Liquidación 3">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p>Descripción de Liquidación 3</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </section>
 
+  <!--pagos y promos-->
+
+  <div class="slide">
+    <div class="slide-inner">
+        <input class="slide-open" type="radio" id="slide-1" name="slide" hidden="" checked="checked">
+        <div class="slide-item">
+            <img src="https://www.migueltroyano.com/wp-content/uploads/2020/10/embeddingApi_7.jpg">
+        </div>
+        <input class="slide-open" type="radio" id="slide-2" name="slide" hidden="">
+        <div class="slide-item">
+            <img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/postgres_copy.png">
+        </div>
+        <input class="slide-open" type="radio" id="slide-3" name="slide" hidden="">
+        <div class="slide-item">
+            <img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/excel_guardar_como_csv.jpg">
+        </div>
+        <label for="slide-3" class="slide-control prev control-1">‹</label>
+        <label for="slide-2" class="slide-control next control-1">›</label>
+        <label for="slide-2" class="slide-control prev control-2">‹</label>
+        <label for="slide-1" class="slide-control next control-2">›</label>
+        <label for="slide-1" class="slide-control prev control-3">‹</label>
+        <label for="slide-3" class="slide-control next control-3">›</label>
+        <ol class="slide-indicador">
+            <li>
+                <label for="slide-1" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-2" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-3" class="slide-circulo">•</label>
+            </li>
+        </ol>
+    </div>
+</div>
+
+
+
+<footer>
+  <div class="footer-grid">
+      <!-- Columna 1 - Nuestra Información -->
+      <div class="footer-column">
+          <h3>Nuestra Información</h3>
+          <p>Dirección: Calle 123, Ciudad</p>
+          <p>Teléfono: (123) 456-7890</p>
+          <p>Email: info@example.com</p>
+      </div>
+
+      <!-- Columna 2 - Links de Interés -->
+      <div class="footer-column">
+          <h3>Links de Interés</h3>
+          <a class="footer-link" href="#">Términos y Condiciones</a>
+          <a class="footer-link" href="#">Política de Privacidad</a>
+          <a class="footer-link" href="#">Preguntas Frecuentes</a>
+      </div>
+
+      <!-- Columna 3 - Redes Sociales -->
+      <div class="footer-column">
+          <h3>Redes Sociales</h3>
+          <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+      </div>
+
+      <!-- Columna 4 - Suscribirse a Nuestro Newsletter -->
+      <div class="footer-column">
+          <h3>Suscribirse a Nuestro Newsletter</h3>
+          <form class="subscribe-form" action="#">
+              <input type="email" placeholder="Ingrese su correo electrónico">
+              <button type="submit">Suscribirse</button>
+          </form>
+      </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+
+</body>
 </html>

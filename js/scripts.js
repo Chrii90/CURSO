@@ -51,11 +51,6 @@ if (document.querySelector(".gallery__item")) {
 				container.style.backgroundColor = "#df91484d";
 
 			}
-            if (i === 5) {
-
-				container.style.backgroundColor = "#fff";
-
-			}
 
 		});
 
