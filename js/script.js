@@ -113,10 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
         startProgress();
     }
 
-    setInterval(nextImage, 3000);
+    setInterval(nextImage, 5000);
     showImage(currentIndex);
     startProgress();
 });
+
+
 
 
 
