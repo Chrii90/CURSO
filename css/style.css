@@ -7,8 +7,8 @@
 
 :root {
   --primario: #d6e4fa;
-  --primarioOscuro: #00204a;
-  --secundario: #2dabff;
+  --primarioOscuro: #0E243C;
+  --secundario: #ED433A;
   --secundarioOscuro: rgb(233, 187, 2);
   --blanco: #FFF;
   --negro: #000;
@@ -30,6 +30,10 @@ body {
   
   font-size: 1.6rem;
   line-height: 1.5;
+  background-image: url(../img/22.avif);
+  background-repeat: no-repeat;
+  background-size: 100% 10%;
+
 }
 p {
   font-size: 1.8rem;
@@ -112,6 +116,8 @@ h3 {
 }
 .header__logo {
   margin: 3rem 0;
+  
+  
 }
 /** Navegacion **/
 .navegacion {
@@ -130,6 +136,61 @@ h3 {
 .navegacion__enlace:hover {
   color: var(--secundario);
 }
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: flex;
+  }
+}
+
+
 
 /** Grid **/
 .grid {
@@ -615,10 +676,42 @@ button:hover {
     text-align: center;
 }
 
-/* Estilos para cada columna */
-.footer-column {
-    text-align: left;
+.footer-column h3{
+
+    color: white;        
+    background-color: var(--secundario);
+    padding: 5px;         
+    display: inline-block; 
+    transition: border 0.3s ease-in-out;
+    
 }
+
+
+/* Estilos para cada columna */
+.footer-column 
+  
+  {
+    
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar el texto dentro del div */
+    
+}
+
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /* Estilos para los enlaces */
 .footer-link {
@@ -652,10 +745,6 @@ button:hover {
     color: #007bff; /* Cambia a un color azul al pasar el mouse */
 }
 
-/* Estilos para el formulario de suscripción */
-.subscribe-form {
-    text-align: center;
-}
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
@@ -667,4 +756,67 @@ button:hover {
     .footer-column {
         text-align: center;
     }
+}
+
+/* comprar*/
+
+.contenedor-comprar {
+
+  position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  
+}
+
+.contenedor-comprar img  {
+  
+  width: 100%;
+  height: auto;
+  display: block; 
+  
+}
+/* Estilos para el botón con la clase .coleccion */
+.coleccion {
+  background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    
+    
+  }
+  .content {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+  
+  /* Estilos para hacer el botón responsive */
+  @media (max-width: 768px) {
+    .coleccion {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+    /* Posicionar el botón arriba en dispositivos móviles */
+    .coleccion {
+      position: relative;
+      top: -20px; /* Ajusta el valor según tu preferencia */
+    }
+
+
+.coleccion:hover {
+  background-color: darkred; /* Cambia el color de fondo cuando se pasa el mouse por encima del botón */
 }
