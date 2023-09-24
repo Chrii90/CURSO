@@ -31,7 +31,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   background-image: url(../img/22.avif);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 100% 10%;
 
 }
@@ -653,9 +653,9 @@ h3 {
 
   position: relative;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    background-color: #e3ecfc;
   
 }
 
@@ -678,6 +678,7 @@ h3 {
     transition: background-color 0.3s ease;
     position: absolute;
     top: 20px;
+    font-family: var(--fuentePrincipal);
     
     
   }
@@ -712,68 +713,44 @@ h3 {
 
 /* PRUEBA DE CARROUSEL NUEVO*/
 
-
-/* Estilos del carrusel */
-.carousel {
-  position: relative;
+.carousel-container {
   overflow: hidden;
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: center; /* Centra horizontalmente dentro del contenedor */
+  position: relative; /* Permite posicionar los botones de navegación */
+  background-color: #F5f5DC;
 }
 
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s;
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
-
-/* Estilos de los botones */
-.carousel-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.prev-button,
-.next-button {
-  background-color: #fff;
+.carousel-button {
+  background-color: #ff0000;
+  color: white;
+  padding: 8px 16px;
   border: none;
   cursor: pointer;
-  padding: 10px 15px;
   font-size: 16px;
-  color: #333;
-  border: 1px solid #f00;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.prev-button:hover,
-.next-button:hover {
-  background-color: #f00;
-  color: #fff;
+.prev-button {
+  left: 10px;
 }
 
-/* Estilos de la barra de progreso */
-.progress-bar {
-  flex-grow: 1;
-  height: 5px; /* Reducimos la altura de la barra */
-  background-color: #ccc;
-  margin: 0 10px;
-  position: relative;
+.next-button {
+  right: 10px;
 }
 
-.progress {
-  height: 100%;
-  width: 0;
-  background-color: #f00;
-  transition: width 0.5s;
+.carousel {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente dentro del contenedor */
+  align-items: center; /* Centra verticalmente dentro del contenedor */
+  transition: transform 0.5s ease-in-out;
+  margin: 0 -10px; /* Ajusta el margen negativo para acercar los botones a las imágenes */
+}
+
+.carousel img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: 0 10px; /* Ajusta el margen lateral para separar las imágenes */
 }
