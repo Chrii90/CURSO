@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = carousel.querySelectorAll("img");
     const totalImages = images.length;
     let currentIndex = 0;
+    let progressInterval;
 
     function showImage(index) {
         for (let i = 0; i < totalImages; i++) {
@@ -77,16 +78,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function nextImage() {
         currentIndex = (currentIndex + 1) % totalImages;
         showImage(currentIndex);
+        resetProgress();
     }
 
     function prevImage() {
         currentIndex = (currentIndex - 1 + totalImages) % totalImages;
         showImage(currentIndex);
+        resetProgress();
     }
 
-    // Agrega event listeners para los botones de navegación
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
+    const progressBar = document.getElementById("progress-bar");
 
     prevBtn.addEventListener("click", function () {
         prevImage();
@@ -96,11 +99,24 @@ document.addEventListener("DOMContentLoaded", function () {
         nextImage();
     });
 
-    // Cambiar de imagen automáticamente cada 3 segundos
-    setInterval(nextImage, 5000);
+    function startProgress() {
+        progressBar.style.transition = "none";
+        progressBar.style.width = "0%";
+        progressBar.offsetWidth; // Truco para reiniciar la animación
+        progressBar.style.transition = "width 3s linear";
+        progressBar.style.width = "100%";
+    }
 
-    // Muestra la primera imagen al cargar la página
+    function resetProgress() {
+        clearInterval(progressInterval);
+        progressBar.style.width = "0%";
+        startProgress();
+    }
+
+    setInterval(nextImage, 3000);
     showImage(currentIndex);
+    startProgress();
 });
+
 
 
