@@ -732,6 +732,9 @@ h3 {
   position: relative;
   overflow: hidden;
   text-align: center; /* Centra horizontalmente dentro del contenedor */
+  border: 2px solid transparent; /* Inicialmente, el borde es transparente */
+  /* Otros estilos de tu botón */
+  transition: border 0.3s ease-in-out
 }
 
 .carousel-button {
@@ -776,7 +779,7 @@ h3 {
   height: 4px;
   background-color: #ccc;
   position: absolute;
-  top: 0;
+  bottom: 0;
 }
 
 .progress-bar {
