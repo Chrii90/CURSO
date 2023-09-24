@@ -63,15 +63,32 @@ h1, h2, h3 {
   color: var(--secundario);
   font-family: var(--fuentePrincipal);
 }
+
+@keyframes drawBorder {
+  0% {
+    border-image-source: linear-gradient(to right, transparent, red);
+    border-image-slice: 1;
+  }
+  100% {
+    border-image-source: linear-gradient(to right, red, transparent);
+    border-image-slice: 1;
+  }
+
+}
+
 h1 {
   font-size: 4rem;
-  
-  color:var(--primarioOscuro);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);   
+  color: var(--primarioOscuro);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 5%; 
+  padding: 3px 5px; /* Espacio alrededor del texto */
+  display: inline-block; /* Para que el fondo abarque solo el contenido del h1 */
+  border: 2px solid transparent; /* Borde transparente inicial */
+  animation: drawBorder 1s linear infinite alternate; /* Aplicar la animación de dibujo */
+  border-image-width: 2px; /* Grosor del borde */ 
 }
+
 h2 {
   font-size: 3.2rem;
   
@@ -570,7 +587,7 @@ h3 {
 
     color: white;        
     background-color: var(--secundario);
-    padding: 5px;         
+    padding: 4px;         
     display: inline-block; 
     transition: border 0.3s ease-in-out;
     
@@ -635,17 +652,14 @@ h3 {
     color: #007bff; /* Cambia a un color azul al pasar el mouse */
 }
 
-
-/* Estilos para dispositivos móviles */
+/* Media query para dispositivos con un ancho máximo de 768px (puedes ajustar este valor según tus necesidades) */
 @media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+  /* Ajustes de estilo para el footer en dispositivos más pequeños */
 
-    .footer-column {
-        text-align: center;
-    }
+  /* Por ejemplo, puedes cambiar la disposición de las columnas a una sola columna */
+  .footer-grid {
+    grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+  }
 }
 
 /* comprar*/
@@ -826,4 +840,17 @@ h3 {
 
 .overlay-button:hover {
   background-color: #0056b3;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  /* Ejemplo de ajuste para el encabezado */
+  .header__texto {
+    margin-top: 10rem; /* Ajusta el margen superior para dispositivos móviles */
+  }
+
+  /* Ejemplo de ajuste para la barra de navegación */
+  .barra {
+    display: block; /* Cambia a bloque para dispositivos móviles */
+  }
 }
