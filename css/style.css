@@ -454,7 +454,7 @@ h3 {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-color: #e3ecfc;
+  
 }
 
 .gallery__item {
@@ -487,23 +487,23 @@ h3 {
 }
 
 .gallery__item:nth-child(1) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/999.jpg");
+  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/panta2.jpg");
 }
 
 .gallery__item:nth-child(2) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/9999.jpg");
+  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/sn01.webp");
 }
 
 .gallery__item:nth-child(3) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/99999.jpg");
+  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/hsl03.webp");
 }
 
 .gallery__item:nth-child(4) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/9999.jpg");
+  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/tee02.webp");
 }
 
 .gallery__item:nth-child(5) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/999.jpg");
+  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/9999.png");
 }
 
 .gallery__title {
@@ -512,9 +512,10 @@ h3 {
   left: 5px;
   padding: 5px 10px;
   opacity: 0;
-  font-size: 30px;
+  font-size: 90px;
   border-radius: 5px;
-  color: #0d5ef3;
+  color: var(--secundario);
+  font-family: var(--fuentePrincipal);
 }
 
 /* Estilos para dispositivos más pequeños (ajusta estos valores según tus necesidades) */
@@ -725,7 +726,7 @@ h3 {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    background-color: #F5f5d5;
+    background-color: #fff;
 }
 
 .carousel-container {

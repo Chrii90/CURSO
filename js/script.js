@@ -24,31 +24,31 @@ if (document.querySelector(".gallery__item")) {
 
 			if (i === 0) {
 
-				container.style.backgroundColor = "#95120e4d";
+				container.style.backgroundColor = "#008f394d";
 
 			}
 
 			if (i === 1) {
 
-				container.style.backgroundColor = "#1f9ec14d";
+				container.style.backgroundColor = "#4c28824d";
 
 			}
 
 			if (i === 2) {
 
-				container.style.backgroundColor = "#d4d1ce4d";
+				container.style.backgroundColor = "#0000001d";
 
 			}
 
 			if (i === 3) {
 
-				container.style.backgroundColor = "#c76d484d";
+				container.style.backgroundColor = "#951E4D4d";
 
 			}
 
 			if (i === 4) {
 
-				container.style.backgroundColor = "#df91484d";
+				container.style.backgroundColor = "#FFFF004d";
 
 			}
 
