@@ -551,7 +551,18 @@ h3 {
   .gallery__item.--active {
     flex: 1;
   }
+  .gallery__title {
+    transform: rotate(-90deg); /* Rotar el texto -90 grados en pantallas más pequeñas */
+      transform-origin: left center; /* Puedes ajustar el punto de origen según tus necesidades */
+      white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      margin-left: 20px;
+      
+    }
 }
+
 
 
 /* pagos y promos*/
