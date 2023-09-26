@@ -118,6 +118,22 @@ document.addEventListener("DOMContentLoaded", function () {
     startProgress();
 });
 
+// SECCION HERO
+// Esperar a que se carguen todas las imágenes antes de mostrarlas
+window.addEventListener('load', () => {
+    // Agregar la clase 'appear' al texto para que aparezca con animación
+    const text = document.querySelector('.hero-text');
+    text.classList.add('appear');
+    
+    // Agregar la clase 'appear' a las imágenes para que aparezcan con animación
+    const images = document.querySelectorAll('.hero-image');
+    images.forEach((image, index) => {
+        setTimeout(() => {
+            image.classList.add('appear');
+        }, 500 * index); // Retrasar cada imagen en 500ms
+    });
+});
+
 
 
 

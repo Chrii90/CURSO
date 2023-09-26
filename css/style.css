@@ -677,24 +677,50 @@ h3 {
 
 /* comprar*/
 
-.contenedor-comprar {
-
+      /* Estilo para el contenedor principal */
+.hero-section {
   position: relative;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: #e3ecfc;
-  
+  height: 60vh; /* Ajusta la altura según tus preferencias (60% de la altura de la ventana) */
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.contenedor-comprar img  {
-  
-  width: 100%;
-  height: auto;
-  display: block; 
-  min-height: 50vh;
-  
+/* Estilo para las imágenes */
+.hero-image {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  opacity: 0; /* Inicialmente, las imágenes están ocultas */
+  transition: opacity 0.5s, transform 0.5s; /* Agrega una transición a la opacidad y la posición */
 }
+
+ /* Estilo para el texto */
+ .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(50%, 0%);
+  text-align: center;
+  font-size: 36px;
+  font-family: var(--fuentePrincipal);
+  color: var(--primarioOscuro);
+  opacity: 0; /* Inicialmente, las imágenes están ocultas */
+  transition: opacity 0.5s, transform 0.5s; /* Agrega una transición a la opacidad y la posición */
+  z-index: 2; /* Asegura que el texto esté en la parte superior */
+}
+
+/* Estilo para la animación de aparecer */
+.appear {
+    opacity: 1;
+    transform: translateX(0); /* Mueve las imágenes desde la izquierda hacia el centro */
+}
+
+
+
+
 /* Estilos para el botón con la clase .coleccion */
 .coleccion {
   background-color: red;
