@@ -33,6 +33,8 @@ body {
   background-image: url(../img/22.avif);
   background-repeat: repeat;
   background-size: 100% 10%;
+  margin: 0;
+  padding: 0;
 
 }
 p {
@@ -690,6 +692,7 @@ h3 {
   width: 100%;
   height: auto;
   display: block; 
+  min-height: 50vh;
   
 }
 /* Estilos para el botón con la clase .coleccion */
@@ -741,17 +744,16 @@ h3 {
 
 .ofertas {
   font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente en la página */
-    align-items: center; /* Centra verticalmente en la página */
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: #fff;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente en la página */
+  align-items: center; /* Centra verticalmente en la página */
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+  margin-top: 10px;
 }
 
 .carousel-container {
@@ -852,16 +854,9 @@ h3 {
 .overlay-button:hover {
   background-color: #0056b3;
 }
-
-/* Media queries para dispositivos más pequeños */
 @media (max-width: 768px) {
-  /* Ejemplo de ajuste para el encabezado */
-  .header__texto {
-    margin-top: 10rem; /* Ajusta el margen superior para dispositivos móviles */
-  }
-
-  /* Ejemplo de ajuste para la barra de navegación */
-  .barra {
-    display: block; /* Cambia a bloque para dispositivos móviles */
+  .ofertas {
+    min-height: 30vh; /* Ajusta este valor para dispositivos móviles */
+    margin-top: 10px; /* Ajusta el margen superior para dispositivos móviles */
   }
 }
