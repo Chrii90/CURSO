@@ -10,8 +10,8 @@
   --primarioOscuro: #0E243C;
   --secundario: #ED433A;
   --secundarioOscuro: rgb(233, 187, 2);
-  --blanco: #FFF;
-  --negro: #000;
+  --blanco: #ffffffbe;
+  --negro: #000000be;
 
   --fuentePrincipal: 'Staatliches', cursive;
 }
@@ -50,10 +50,25 @@ img {
 }
 .contenedor {
   margin: 0 auto;
+  padding: 50px;
   background-color: var(--blanco);
   width: 100%;
   height: 100%;
 }
+
+.contenedor-mapa {
+  margin: 0 auto;
+  background-color: var(--blanco);
+  width: 30%;
+  height: auto;
+}
+.contact-form {
+  margin: 0 auto;
+  background-color: var(--blanco);
+  width: 60%;
+  height: auto;
+}
+
 .contenedor2 {
   max-width: 100%;
   margin: 0 auto;
@@ -86,9 +101,9 @@ h1 {
   text-transform: uppercase;
   padding: 3px 5px; /* Espacio alrededor del texto */
   display: inline-block; /* Para que el fondo abarque solo el contenido del h1 */
-  border: 2px solid transparent; /* Borde transparente inicial */
-  animation: drawBorder 1s linear infinite alternate; /* Aplicar la animación de dibujo */
-  border-image-width: 2px; /* Grosor del borde */ 
+  border: none; /* Borde transparente inicial */
+  /* animation: drawBorder 1s linear infinite alternate; Aplicar la animación de dibujo */
+  /*border-image-width: 2px;  Grosor del borde */ 
 }
 
 h2 {
@@ -208,7 +223,13 @@ h3 {
       display: flex;
   }
 }
-
+form {
+  padding-left: 20px;
+  border: none
+}
+fieldset {
+  border:none
+}
 
 
 /** Grid **/
@@ -226,7 +247,8 @@ h3 {
 /** Productos **/
 .producto {
   background-color: var(--primarioOscuro);
-  padding: 1rem;
+  margin: 5rem;
+  padding: 2rem;
 }
 
 .producto__nombre {
@@ -315,11 +337,20 @@ h3 {
       column-gap: 2rem;
   }
 }
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+
+
 
 .formulario {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  /* gap: 2rem; */
+  width: 95%;
 }
 .formulario__campo {
  border: 1rem solid var(--primarioOscuro);
@@ -345,33 +376,48 @@ h3 {
 }
 
 /* Formulario */
-.Formulario {
-  background-color: #002A61;
+.formulario {
+  padding: 20px;
+  background-color: #55555580;
   }
   
-  .Formulario label {
-      color: #FFF;
+  .formulario label {
+      color: #ddd;
   }
   
   input {
       display: flex;
-      background-color: #f2f2f2;
-      color: #000;
-      border: 1px solid #ccc;
+      flex-direction: column;
+      background-color: #f2f2f290;
+      color: #000000a6;
+      border: none;
       padding: 10px;
       margin: 10px;
+      width: 100%;
       /* Aplicar sombra al casillero */
-      box-shadow: 10px 10px 10px rgba(250, 249, 249, 0.2);
+      box-shadow: 10px 10px 10px rgba(250, 249, 249, 0.1);
   }
+  .input {
+    display: flex;
+    background-color: #f2f2f290;
+    color: #000;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    /* Aplicar sombra al casillero */
+    box-shadow: 10px 10px 10px rgba(250, 249, 249, 0.1);
+}
+
   input[type="submit"],
   
   button {
       background-color: #007bff;
-      color: #fff;
+      width: 90px;
+      color: #ccc;
       padding: 10px 20px;
       border: none;
       cursor: pointer;
-      border-radius: 12%;
+      border-radius: 5px;
       
   }
   
@@ -779,7 +825,7 @@ h3 {
   margin: 0 auto;
   overflow: hidden;
   background-color: #fff;
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 .carousel-container {
