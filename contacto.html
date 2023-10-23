@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/vnd.icon" href="favicon.ico">
+    <!-- Agrega la biblioteca ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal@4/dist/scrollreveal.min.js"></script>
+
 </head>
 <body>
     <header class="header">
@@ -22,71 +25,72 @@
         <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
         <a class="navegacion__enlace" href="contacto.html">Contacto</a>
     </nav>
-    <div class="contact-container">
-
-        <div class="contenedor-mapa">
-            
-            <H2>Donde estamos ubicados.</H2>
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.75955271677!2d-58.5981081473618!3d-34.61571293339003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1695402357283!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-        </div>
-        <div class="contact-form">
-            <h2> Dejanos tu comentario y te contactaremos</h2>
-            <form>
-                <fieldset class="formulario">
-                    
-                    <p><label for="camponombre">Nombre:</label>  
-                        <input id="camponombre" ></p>
-                        
-                        <p><label for="email">Correo electrónico: </label>  
-                            <input id="email" type="email" required ></p>
-                            
-                            <p><label for="tel">Número de contacto:</label>
-                                <input type="tel" ></p>
-                                
-                                <p><label for="camponombre">Asunto: </label>  
-                                    <input type="camponombre"></p>
-                                    
-                                    <p><label>Comentario:</label>  <br>
-                                        <textarea class="input" rows="10" cols="70" required> 
-                                        </textarea></p>
-                                        
-                                        <p><input type="submit" value="Enviar"></p>    
-                                        
-                                    </fieldset>
-                                </form>
-                            </div>
-    </div>
     <section class="contenedor comprar">
-        <h1>Seguinos en Redes Sociales</h1>
+        <h1 id="titulo">Seguinos en Redes Sociales</h1>
 
         <div class="bloques">
             <div class="bloque">
-                <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
-                <h3 class="bloque__titulo">El Mejor Precio</h3>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+                <img class="bloque__imagen" src="img/icono_4.png" alt="camiseta Facebook">
+                <h3 class="bloque__titulo">Facebook</h3>
+                
             </div> <!--.bloque-->
 
             <div class="bloque">
-                <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
-                <h3 class="bloque__titulo">Para Devs</h3>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+                <img class="bloque__imagen" src="img/icono_3.png" alt="Camiseta Instagram">
+                <h3 class="bloque__titulo">Instagram</h3>
+                
             </div> <!--.bloque-->
 
             <div class="bloque">
-                <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
-                <h3 class="bloque__titulo">Envío Gratis</h3>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+                <img class="bloque__imagen" src="img/icono_2.png" alt="Camiseta Twiiter">
+                <h3 class="bloque__titulo">Twiiter </h3>
+                
             </div> <!--.bloque-->
 
             <div class="bloque">
-                <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
-                <h3 class="bloque__titulo">La Mejor Calidad</h3>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta pretium felis</p>
+                <img class="bloque__imagen" src="img/icono_1.png" alt="Camiseta Linkedin">
+                <h3 class="bloque__titulo">LINKEDIN</h3>
             </div> <!--.bloque-->
         </div><!--.bloques-->
     </section> 
+    <div class="contact-container">
+        <div class="contenedor-mapa">
+            <h2>Donde estamos ubicados.</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.75955271677!2d-58.5981081473618!3d-34.61571293339003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1695402357283!5m2!1ses!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-form">
+            <h2>Dejanos tu comentario y te contactaremos</h2>
+            <form action="procesar_formulario.php" method="post" onsubmit="return validarFormulario()">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+" title="Ingrese solo letras y espacios">
+                </div>
+        
+                <div class="form-group">
+                    <label for="numero">Nº de Teléfono:</label>
+                    <input type="text" id="numero" name="numero" required pattern="\d+" title="Ingrese solo dígitos">
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Dirección de correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+        
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+    
     <footer>
         <div class="footer-grid">
             <!-- Columna 1 - Nuestra Información -->

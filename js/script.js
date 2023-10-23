@@ -134,7 +134,53 @@ window.addEventListener('load', () => {
     });
 });
 
+// validacion formulario //
 
+function validarFormulario() {
+    var nombre = document.getElementById("nombre").value;
+    var numero = document.getElementById("numero").value;
+    var email = document.getElementById("email").value;
+
+    // Expresión regular para validar el nombre (solo letras y espacios)
+    var nombreValido = /^[A-Za-z\s]+$/;
+
+    // Expresión regular para validar el número (solo dígitos)
+    var numeroValido = /^\d+$/;
+
+    // Expresión regular para validar el email
+    var emailValido = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    if (!nombre.match(nombreValido)) {
+        alert("Por favor, ingrese un nombre válido (solo letras y espacios).");
+        return false;
+    }
+
+    if (!numero.match(numeroValido)) {
+        alert("Por favor, ingrese un número válido (solo dígitos).");
+        return false;
+    }
+
+    if (!email.match(emailValido)) {
+        alert("Por favor, ingrese un correo electrónico válido.");
+        return false;
+    }
+
+    // El formulario es válido
+    return true;
+}
+
+// aniamcioopn de titulo redes sociales
+document.addEventListener('DOMContentLoaded', function() {
+    const titulo = document.getElementById('titulo');
+
+    window.addEventListener('scroll', function() {
+        const posicionTitulo = titulo.getBoundingClientRect();
+
+        if (posicionTitulo.top < window.innerHeight && !titulo.classList.contains('aparecer')) {
+            titulo.classList.add('aparecer');
+        }
+    });
+});
 
 
 
