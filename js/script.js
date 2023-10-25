@@ -213,6 +213,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
+// logica mostrar mas//
+
+document.addEventListener('DOMContentLoaded', function () {
+    const showMoreButton = document.getElementById('showMoreButton');
+    const modal = document.getElementById('myModal');
+    const closeModal = document.getElementById('closeModal');
+
+    showMoreButton.addEventListener('click', function () {
+        modal.style.display = 'block';
+    });
+
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+
+
 
 
      
