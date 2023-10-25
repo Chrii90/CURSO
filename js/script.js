@@ -183,4 +183,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// API REST
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const apiUrl = 'https://fakestoreapi.com/products';
+
+    const productList = document.getElementById('product-list');
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('No se pudo obtener la información de la API');
+        }
+        const products = await response.json();
+
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'product';
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.title}" class="product-image">
+                <h2 class="product-title">${product.title}</h2>
+                <p class="product-description">${product.description}</p>
+                <p class="product-price">Price: $${product.price}</p>
+            `;
+            productList.appendChild(productDiv);
+        });
+    } catch (error) {
+        console.error('Error al cargar productos:', error);
+    }
+});
+
+
+
+     
+
 
