@@ -690,14 +690,16 @@ p {
 
 .bloque {
   text-align: center;
+  margin-left:20px;
+  margin-right:20px;
 }
 
 
 .bloque__titulo {
   margin: 0;
    text-align: center;
-  color: var(--primarioOscuro);
-  background-color: rgba(247, 3, 3, 0.123);
+  color: #FFF;
+  background-color: rgb(3, 0, 31);
 }
 .bloque__imagen {
   width: 100%; /* Asegura que la imagen ocupa todo el contenedor */
