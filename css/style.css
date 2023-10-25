@@ -926,23 +926,23 @@ input[type="submit"]:hover {
 }
 
 .gallery__item:nth-child(1) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/panta2.jpg");
+  background: center/cover no-repeat url("../img/carrousel/panta2.png");
 }
 
 .gallery__item:nth-child(2) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/sn01.webp");
+  background: center/cover no-repeat url("../img/carrousel/zapa.png");
 }
 
 .gallery__item:nth-child(3) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/hsl03.webp");
+  background: center/cover no-repeat url("../img/carrousel/hsl03.webp");
 }
 
 .gallery__item:nth-child(4) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/tee02.webp");
+  background: center/cover no-repeat url("../img/carrousel/remera.png");
 }
 
 .gallery__item:nth-child(5) {
-  background: center/cover no-repeat url("https://lowcargo.lat/carrousel/9999.png");
+  background: center/cover no-repeat url("../img/carrousel/9999.png");
 }
 
 .gallery__title {
@@ -1400,7 +1400,7 @@ input[type="submit"]:hover {
 
 /* llamado a la accion */
 #llamado-accion {
-  background-image: url(../img/23.jpg);
+  background-image: url(/img/23.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
