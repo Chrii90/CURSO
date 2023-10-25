@@ -793,7 +793,6 @@ textarea {
   border-radius: 3px;
   width: 100%;
   background-color: rgba(228, 228, 228, 0.7);
-  box-shadow: 10px 10px 10px rgba(250, 249, 249, 0.2);
 }
 
 input[type="submit"] {
@@ -840,10 +839,10 @@ input[type="submit"]:hover {
   }
     
 
-/* Estilos para tamaños de pantalla pequeños (móviles) */
+/* Media query para dispositivos móviles (por ejemplo, anchura menor a 768px) */
 @media (max-width: 768px) {
   .contact-form {
-    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    width: 100%; /* Establece el ancho al 100% en dispositivos móviles */
   }
 }
 
