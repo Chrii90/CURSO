@@ -24,7 +24,7 @@ if (document.querySelector(".gallery__item")) {
 
 			if (i === 0) {
 
-				container.style.backgroundColor = "#008f394d";
+				container.style.backgroundColor = "#0033004d";
 
 			}
 
@@ -36,19 +36,19 @@ if (document.querySelector(".gallery__item")) {
 
 			if (i === 2) {
 
-				container.style.backgroundColor = "#0000001d";
+				container.style.backgroundColor = "#A5967E4d";
 
 			}
 
 			if (i === 3) {
 
-				container.style.backgroundColor = "#951E4D4d";
+				container.style.backgroundColor = "#77C06C4d";
 
 			}
 
 			if (i === 4) {
 
-				container.style.backgroundColor = "#FFFF004d";
+				container.style.backgroundColor = "#3599CB4d";
 
 			}
 
@@ -57,6 +57,52 @@ if (document.querySelector(".gallery__item")) {
 	});
 
 }
+
+//SLIDER TELEFONOS MOVILES//
+
+$(document).ready(function () {
+    function toggleSlider() {
+      var windowWidth = $(window).width();
+      var sliderMobile = $('.slider-mobile');
+  
+      if (windowWidth <= 767) {
+        sliderMobile.show();
+  
+        if (!sliderMobile.hasClass('slick-initialized')) {
+          // Configura el slider solo si no se ha inicializado
+          sliderMobile.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            mobileFirst: true,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                }
+              }
+            ]
+          });
+        }
+      } else {
+        sliderMobile.hide();
+        // Si el slider se ha inicializado, destrúyelo para evitar conflictos con la verificación de pantalla
+        if (sliderMobile.hasClass('slick-initialized')) {
+          sliderMobile.slick('unslick');
+        }
+      }
+    }
+  
+    // Llama a la función al cargar la página y al redimensionar la ventana
+    toggleSlider();
+    $(window).on('resize', toggleSlider);
+  });
+  
+
 
 // CARROUSEL OFERTAS
 
@@ -118,21 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
     startProgress();
 });
 
-// SECCION HERO
-// Esperar a que se carguen todas las imágenes antes de mostrarlas
-window.addEventListener('load', () => {
-    // Agregar la clase 'appear' al texto para que aparezca con animación
-    const text = document.querySelector('.hero-text');
-    text.classList.add('appear');
-    
-    // Agregar la clase 'appear' a las imágenes para que aparezcan con animación
-    const images = document.querySelectorAll('.hero-image');
-    images.forEach((image, index) => {
-        setTimeout(() => {
-            image.classList.add('appear');
-        }, 500 * index); // Retrasar cada imagen en 500ms
-    });
-});
+
+
 
 // validacion formulario //
 
@@ -169,18 +202,7 @@ function validarFormulario() {
     return true;
 }
 
-// aniamcioopn de titulo redes sociales
-document.addEventListener('DOMContentLoaded', function() {
-    const titulo = document.getElementById('titulo');
 
-    window.addEventListener('scroll', function() {
-        const posicionTitulo = titulo.getBoundingClientRect();
-
-        if (posicionTitulo.top < window.innerHeight && !titulo.classList.contains('aparecer')) {
-            titulo.classList.add('aparecer');
-        }
-    });
-});
 
 
 // API REST

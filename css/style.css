@@ -986,6 +986,37 @@ input[type="submit"]:hover {
     }
 }
 
+/* SLIDER MOVILES */
+
+/* Estilo para dispositivos móviles (ancho máximo de 767px) */
+@media (max-width: 767px) {
+  /* Ocultar la galería en dispositivos móviles */
+  .gallery {
+    display: none;
+  }
+}
+  /* Estilo para dispositivos móviles (ancho máximo de 767px) */
+@media (max-width: 767px) {
+  /* Mostrar el slider de imágenes en dispositivos móviles */
+  .slider-mobile {
+    display: block;
+    /* Agrega estilos específicos para el slider móvil si es necesario */
+  }
+}
+
+/* Estilo para tablets y escritorio (ancho mínimo de 768px) */
+@media (min-width: 768px) {
+  /* Ocultar completamente el slider de imágenes en tablets y escritorio */
+  .slider-mobile {
+    display: none;
+  }
+  /* Mostrar la galería en tablets y escritorio */
+  .gallery {
+    display: block;
+    /* Agrega estilos específicos para la galería si es necesario */
+  }
+}
+
 
 
 /* pagos y promos*/
@@ -1230,12 +1261,13 @@ input[type="submit"]:hover {
 }
 
 .carousel-button {
-  background-color: red;
-  color: white;
+  background-color: transparent;
+  color: var(--primarioOscuro);
   padding: 8px 12px; /* Ajusta el padding para acercar los botones */
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: bold;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
