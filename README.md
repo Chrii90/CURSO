@@ -21,12 +21,12 @@ Diseño y Estilo: El diseño se caracterizará por ser moderno y atractivo, con 
 
 Contenido y Funcionalidades: El sitio incorporará una variedad de elementos y funcionalidades, entre ellos:
 
-•	Texto descriptivo de productos y la empresa.
-•	Imágenes de alta calidad que muestren los productos.
-•	Videos y animaciones para presentar los productos de manera efectiva.
-•	Canal de pago seguro para facilitar las transacciones.
-•	Formularios de contacto para consultas y atención al cliente.
-•	Barra de búsqueda para ayudar a los usuarios a encontrar productos específicos.
+1.	Texto descriptivo de productos y la empresa.
+2.	Imágenes de alta calidad que muestren los productos.
+3.	Videos y animaciones para presentar los productos de manera efectiva.
+4.	Canal de pago seguro para facilitar las transacciones.
+5.	Formularios de contacto para consultas y atención al cliente.
+6.	Barra de búsqueda para ayudar a los usuarios a encontrar productos específicos.
 
 Responsabilidades del Equipo: Las responsabilidades del equipo se asignarán durante la planificación del proyecto, y se definirán de acuerdo con las habilidades y experiencia de cada miembro.
 
