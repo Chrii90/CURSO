@@ -8,6 +8,7 @@ El proyecto consiste en la creación de una tienda web dedicada a la exhibición
 
 Público Objetivo: Nuestro público objetivo se compone de personas de 18 a 50 años con interés en adquirir productos de indumentaria Urbana. Nos esforzaremos por ofrecer una experiencia de usuario amigable y atractiva para satisfacer sus necesidades y preferencias.
 Estructura del Sitio: El sitio web constará de las siguientes secciones principales:
+
 1.	HOME: La página principal que mostrará las ofertas de productos y proporcionará acceso a las subpáginas.
 2.	CATÁLOGO: Una sección que exhibirá los productos disponibles para su compra.
 3.	CARRITO: Un espacio donde los usuarios podrán agregar los productos que desean comprar.
