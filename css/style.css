@@ -753,36 +753,53 @@ iframe {
 
 
 .contact-form {
-  
   display: grid;
-  grid-template-columns: 1fr; /* Una sola columna que ocupará todo el ancho */
-  grid-gap: 20px; /* Espacio entre las columnas */
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
   background-color: var(--primarioOscuro);
   padding: 20px;
+  text-align: center; /* Alinea el contenido al centro */
 }
 
-.contact-form p{
+.contact-form p {
   color: #f2f2f2;
   font-size: 18px;
   border: 2px solid red;
   text-align: center;
 }
 
-.contact-form h3{
+.contact-form h3 {
   color: #FFF;
   font-family: var(--fuentePrincipal);
   font-size: 24px;
 }
 
-
 label {
-  
   font-family: "Monserrat";
   font-weight: bold;
-  margin-top:auto;
+  margin-top: auto;
   padding: 1px;
   margin: 1px;
-  color:#FFF;
+  color: #FFF;
+}
+
+button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 12px 12px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: var(--fuentePrincipal);
+  border-radius: 15%;
+  margin: auto; 
+  display: block; 
+  width: 50%; 
+  margin-top:10px;
+}
+
+button:hover {
+  background-color: var(--primarioOscuro);
 }
 
 input,
