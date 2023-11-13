@@ -169,17 +169,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // validacion formulario //
 function validarFormulario() {
-    var nombre = document.getElementById('nombre').value;
-    var email = document.getElementById('email').value;
-    var asunto = document.getElementById('asunto').value;
-    var mensaje = document.getElementById('mensaje').value;
+    // Limpiar mensajes de error anteriores
+    document.getElementById('errorMessages').innerHTML = '';
 
-    if (nombre === '' || email === '' || asunto === '' || mensaje === '') {
-        alert('Por favor, completa todos los campos antes de enviar el formulario.');
-    } else {
-        // Si todos los campos están llenos, puedes enviar el formulario aquí
-        document.getElementById('contactForm').submit();
+    // Obtener valores de los campos
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const asunto = document.getElementById('asunto').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    // Validar nombre
+    if (nombre === '' || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(nombre) || /^\s/.test(nombre)) {
+        mostrarError('El nombre es obligatorio y debe contener solo letras.');
+        return;
     }
+
+    // Validar email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '' || !emailRegex.test(email)) {
+        mostrarError('Ingrese un correo electrónico válido.');
+        return;
+    }
+
+    // Validar asunto (en este caso, no hay restricciones)
+    if (asunto === '') {
+        mostrarError('El asunto es obligatorio.');
+        return;
+    }
+
+    // Validar mensaje (en este caso, no hay restricciones)
+    if (mensaje === '') {
+        mostrarError('El mensaje es obligatorio.');
+        return;
+    }
+
+    // Si llegamos aquí, el formulario es válido. Puedes enviar los datos.
+    alert('Formulario enviado con éxito.');
+}
+
+function mostrarError(message) {
+    const errorMessageContainer = document.getElementById('errorMessages');
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = message;
+    errorMessageContainer.appendChild(errorMessage);
 }
 
 
