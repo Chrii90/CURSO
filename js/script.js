@@ -173,10 +173,10 @@ function validarFormulario() {
     document.getElementById('errorMessages').innerHTML = '';
 
     // Obtener valores de los campos
-    const nombre = document.getElementById('nombre').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const asunto = document.getElementById('asunto').value.trim();
-    const mensaje = document.getElementById('mensaje').value.trim();
+    nombre = document.getElementById('nombre').value
+    email = document.getElementById('email').value
+    asunto = document.getElementById('asunto').value
+    mensaje = document.getElementById('mensaje').value
 
     // Validar nombre
     if (nombre === '' || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(nombre) || /^\s/.test(nombre)) {
@@ -204,7 +204,14 @@ function validarFormulario() {
     }
 
     // Si llegamos aquí, el formulario es válido. Puedes enviar los datos.
+   document.getElementById('nombre').value=""
+   document.getElementById('email').value=""
+   document.getElementById('asunto').value=""
+   document.getElementById('mensaje').value=""
     alert('Formulario enviado con éxito.');
+    //
+    //
+
 }
 
 function mostrarError(message) {
